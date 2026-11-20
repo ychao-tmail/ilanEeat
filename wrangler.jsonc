@@ -1,6 +1,6 @@
 {
-  "name": "yilan-food-island",
-  "compatibility_date": "2026-11-01",
+  "name": "ilaneeat",
+  "compatibility_date": "2025-01-01",
   "assets": {
     "directory": "./dist",
     "not_found_handling": "single-page-application"
