@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans TC", "Outfit", system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", "Noto Sans TC", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: #cde3ea;
+    color: #16262e;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  input {
+    font-family: inherit;
+  }
+}
+
+/* Custom crisp range slider for 24H Time of Day */
+input[type="range"].time-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].time-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+}
+
+input[type="range"].time-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #e0632c;
+  border: 2px solid #ffffff;
+  margin-top: -5px;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.35);
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].time-slider:hover::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+
+input[type="range"].time-slider:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid #2e7d52;
+  outline-offset: 2px;
+}
+
+/* Clean custom scrollbars for drawers and directory */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 9999px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
